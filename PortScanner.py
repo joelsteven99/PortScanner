@@ -24,7 +24,7 @@ hilos = int(sys.argv[4]) if len(sys.argv) > 4 else 100
 if not (1 <= inicio <= fin <= 65535):print("[!] Rango de puertos inválido (1-65535).");sys.exit(1)
 
 try:ip = socket.gethostbyname(objetivo)
-except socket.gaierror:print(f"[!] No se pudo resolver el host: {objetivo}"):sys.exit(1)
+except socket.gaierror:print(f"[!] No se pudo resolver el host: {objetivo}");sys.exit(1)
 
 def escanear(puerto):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
